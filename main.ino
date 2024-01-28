@@ -15,15 +15,15 @@ CD74HC4067 muxDigital1 {
 
 CD74HC4067 muxAnalog {
   A5,       // Analog input pin
-  {12, 13, 14, 15} // Address pins S0, S1, S2, S3
+  {6, 7, 8, 9} // Address pins S0, S1, S2, S3
 };
 
 CD74HC4067 muxAnalog2 {
   A4,       // Analog input pin
-  {12, 13, 14, 15} // Address pins S0, S1, S2, S3
+  {6, 7, 8, 9} // Address pins S0, S1, S2, S3
 };
 
-//pin available 6,7,8,9,10,11 , 6,7,8,9 will be use for rotary . 10,11 will be used by sensor
+//pin available 10,11,12,13 ,will be use for rotary .
 //analog available A1,A2,A3
 
 
@@ -159,12 +159,12 @@ CCPotentiometer Analog2[] {
 
 // Instantiate a CCAbsoluteEncoder object
 CCAbsoluteEncoder enc {
-  {6, 7},       // pins
+  {10, 11},       // pins
   MIDI_CC::Portamento, // MIDI address (CC number + optional channel)
   5,            // optional multiplier if the control isn't fast enough
 };
 CCAbsoluteEncoder enc1 {
-  {8, 9},       // pins
+  {12, 13},       // pins
   MIDI_CC::Expression_Controller, // MIDI address (CC number + optional channel)
   5,            // optional multiplier if the control isn't fast enough
 };
@@ -180,7 +180,7 @@ PBPotentiometer potentiometer {
 
 // Similarly, for Pitch Bend
 //    PBAbsoluteEncoder enc {
-//      {2, 3},    // pins
+//      {1, 3},    // pins
 //      Channel_1, // MIDI channel
 //      127,       // large multiplier because Pitch Bend has high resolution
 //    };
